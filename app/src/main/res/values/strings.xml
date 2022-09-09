@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">Homework01</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="avatar">Avatar</string>
+    <string name="space">\ </string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="support">ECUST</string>
+    <string name="agree">I have read and agree</string>
+    <string name="register">register</string>
+    <string name="forgot">Forgot</string>
+    <string name="sign_in">Sign in</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="memo_version">Memo 1.0</string>
+
+    <!-- main -->
+    <string name="randomCatUrl">https://thiscatdoesnotexist.com/</string>
+
+    <!-- login -->
+    <string name="login_error">Username or password is error</string>
+    <string name="login_empty">Please input username and password</string>
+    <string name="login_successfully">Successfully login</string>
+    <string name="login_agree">Please agree to the contract</string>
+    <string name="memo_href">https://apache.org/licenses/</string>
+    <!-- create -->
+    <string name="check_password">Check Password</string>
+    <string name="gender">Gender</string>
+    <string name="none">none</string>
+    <string name="male">male</string>
+    <string name="female">female</string>
+    <string name="birthday">Birthday</string>
+    <string name="address">Address</string>
+    <string name="email">Email</string>
+    <string name="job">Job</string>
+    <string name="company">Company</string>
+    <string name="check_password_simple">Check Pwd.</string>
+
+    <string name="register_username_empty">Username is empty</string>
+    <string name="register_password_empty">Password is empty</string>
+    <string name="register_password_diff"><![CDATA[Password & check pwd. are diff.]]></string>
+    <string name="register_register_error">Register error</string>
+    <string name="register_insert_error">Database error</string>
+    <string name="register_saveAvatar_error">Cannot save avatar</string>
+    <string name="register_deleteAvatar_error">Cannot delete avatar</string>
+    <string name="register_register_success">Register successfully</string>
+    <string name="register_user_exist">User %s already exists</string>
+    <string name="register_birthday_future">Oh no! Welcome Future Boy!</string>
+    <string name="login_select_error">Database error</string>
+    <string name="popup_cancel">Cancel</string>
+    <string name="popup_camera">Camera</string>
+    <string name="popup_local">Local</string>
+</resources>

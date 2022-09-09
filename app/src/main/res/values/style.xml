@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BigAvatarImageView">
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">150dp</item>
+        <item name="contentDescription">@string/avatar</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <style name="LabelTextView">
+        <item name="android:textSize">20dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginRight">10dp</item>
+    </style>
+
+    <style name="Animation_InputMethod">
+
+    </style>
+</resources>
