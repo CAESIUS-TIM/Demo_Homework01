@@ -93,17 +93,17 @@ public class IndexActivity extends AppCompatActivity implements View.OnClickList
                     .transform(new CircleCrop())
                     .fitCenter() // may change the size of the image
                     .into(new CustomTarget<Drawable>() {
-                                @Override
-                                public void onResourceReady(@NonNull Drawable resource, @Nullable Transition<? super Drawable> transition) {
-                                    Log.i(TAG, "onResourceReady: " + String.format("{resource: %s, transition: %s", resource, transition));
-                                    iv_play.setImageDrawable(resource);
-                                }
+                        @Override
+                        public void onResourceReady(@NonNull Drawable resource, @Nullable Transition<? super Drawable> transition) {
+                            Log.i(TAG, "onResourceReady: " + String.format("{resource: %s, transition: %s", resource, transition));
+                            iv_play.setImageDrawable(resource);
+                        }
 
-                                @Override
-                                public void onLoadCleared(@Nullable Drawable placeholder) {
-                                    Log.i(TAG, "onLoadCleared: ");
-                                }
-                            });
+                        @Override
+                        public void onLoadCleared(@Nullable Drawable placeholder) {
+                            Log.i(TAG, "onLoadCleared: ");
+                        }
+                    });
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -136,6 +136,11 @@ public class IndexActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void setViews() {
         iv_play.setOnClickListener(this);
+    }
+
+    @Override
+    public void initViews() {
+
     }
 
     private void runSubThread() {
@@ -185,11 +190,7 @@ public class IndexActivity extends AppCompatActivity implements View.OnClickList
         Fragment currentFragment = fragmentManager.findFragmentById(R.id.main_frameLayout);
         if (RegisterFragment.class.isInstance(currentFragment)) {
             RegisterFragment registerFragment = (RegisterFragment) currentFragment;
-            if(registerFragment.mSelectPicturePopupWindow != null){
-                registerFragment.mSelectPicturePopupWindow.dismissPopupWindow();
-            }else {
-                fragmentManager.beginTransaction().replace(R.id.main_frameLayout, new LoginFragment(this, fragmentManager, userDao)).commit();
-            }
+            fragmentManager.beginTransaction().replace(R.id.main_frameLayout, getLoginFragment()).commit();
         } else {
             super.onBackPressed();
         }

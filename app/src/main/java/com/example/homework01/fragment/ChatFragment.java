@@ -12,7 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.homework01.MyChatRecyclerViewAdapter;
+import com.example.homework01.view.MyChatRecyclerViewAdapter;
 import com.example.homework01.R;
 import com.example.homework01.placeholder.PlaceholderContent;
 

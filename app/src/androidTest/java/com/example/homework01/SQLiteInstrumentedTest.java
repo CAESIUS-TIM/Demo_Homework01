@@ -32,5 +32,16 @@ public class SQLiteInstrumentedTest {
         assertEquals(user.getPassword(), userDao.getPassword(user));
         Log.i(TAG, "createUser: " + userDao.getPassword(user));
     }
+
+    @Test
+    public void getCount(){
+        Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
+        assertEquals("com.example.homework01", appContext.getPackageName());
+
+        UserDao userDao = new UserDao(appContext);
+        Log.i(TAG, "getCount: female = " + userDao.getNumberOfFemale());
+        Log.i(TAG, "getCount: male = " + userDao.getNumberOfMale());
+        Log.i(TAG, "getCount: none = " + userDao.getNumberOfNone());
+    }
 }
 

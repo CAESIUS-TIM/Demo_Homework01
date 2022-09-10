@@ -35,6 +35,7 @@ import com.bumptech.glide.Glide;
 import com.example.homework01.Dao.UserDao;
 import com.example.homework01.R;
 import com.example.homework01.activity.MainActivity;
+import com.example.homework01.activity.PieActivity;
 import com.example.homework01.entity.User;
 import com.example.homework01.impl.NeedAllFragment;
 import com.example.homework01.utils.WebBrowser;
@@ -95,7 +96,7 @@ public class LoginFragment extends NeedAllFragment implements View.OnClickListen
             root = inflater.inflate(R.layout.fragment_login, container, false);
         }
 
-        initView();
+        initViews();
 
         return root;
     }
@@ -180,7 +181,9 @@ public class LoginFragment extends NeedAllFragment implements View.OnClickListen
 
             case R.id.login_button_forgot:
                 // TODO
-                Toast.makeText(activity, "Forgot", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(activity, "Forgot", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(activity, PieActivity.class);
+                startActivity(intent);
                 break;
 
             case R.id.login_button_create:

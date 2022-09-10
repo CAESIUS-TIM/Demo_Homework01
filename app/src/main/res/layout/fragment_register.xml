@@ -26,11 +26,12 @@
                 android:layout_weight="0"
                 android:text="@string/avatar" />
 
-            <ImageView
-                android:id="@+id/register_imageView_select"
-                style="@style/BigAvatarImageView"
-                android:layout_weight="1"
-                android:src="@drawable/avatar_default" />
+            <fragment android:id="@+id/register_fragment_picture"
+                android:name="com.example.homework01.fragment.ImageSelectFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
         </TableRow>
 
         <!-- username -->

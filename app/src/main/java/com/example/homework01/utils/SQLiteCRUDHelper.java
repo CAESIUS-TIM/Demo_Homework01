@@ -25,5 +25,4 @@ public class SQLiteCRUDHelper {
     public static Integer getNullableInteger(Cursor cursor, String columnName){
         return getNullableInteger(cursor, cursor.getColumnIndexOrThrow(columnName));
     }
-
 }

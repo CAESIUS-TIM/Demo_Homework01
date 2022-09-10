@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import com.example.homework01.Dao.UserDao;
+import com.example.homework01.fragment.PictureSelectorFragment;
 
 public abstract class NeedAllFragment extends Fragment implements InitiatedViewer{
     protected View root;
@@ -20,7 +21,8 @@ public abstract class NeedAllFragment extends Fragment implements InitiatedViewe
         this.userDao = userDao;
     }
 
-    protected void initView(){
+    @Override
+    public void initViews(){
        findViews();
        setViews();
     }

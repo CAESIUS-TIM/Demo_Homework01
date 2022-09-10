@@ -6,4 +6,6 @@ public interface InitiatedViewer {
     void findViews();
 
     void setViews();
+
+    void initViews();
 }

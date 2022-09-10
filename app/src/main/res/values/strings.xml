@@ -13,7 +13,7 @@
     <string name="support">ECUST</string>
     <string name="agree">I have read and agree</string>
     <string name="register">register</string>
-    <string name="forgot">Forgot</string>
+    <string name="forgot">Statistics</string>
     <string name="sign_in">Sign in</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
@@ -52,7 +52,11 @@
     <string name="register_user_exist">User %s already exists</string>
     <string name="register_birthday_future">Oh no! Welcome Future Boy!</string>
     <string name="login_select_error">Database error</string>
-    <string name="popup_cancel">Cancel</string>
-    <string name="popup_camera">Camera</string>
-    <string name="popup_local">Local</string>
+
+    <string name="label_cancel">Cancel</string>
+    <string name="label_ok">OK</string>
+    <string name="permission_title_rationale">权限需求</string>
+    <string name="permission_read_storage_rationale">选择图片时需要读取权限</string>
+    <string name="permission_write_storage_rationale">拍照时需要存储权限</string>
+    <string name="gender_ratio">Gender ratio</string>
 </resources>

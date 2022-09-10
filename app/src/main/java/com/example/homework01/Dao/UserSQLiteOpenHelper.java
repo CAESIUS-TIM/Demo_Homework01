@@ -17,6 +17,7 @@ import com.example.homework01.entity.User;
  */
 public class UserSQLiteOpenHelper extends SQLiteOpenHelper {
 
+    private static final int DB_VERSION = 1;
     private final static String TAG = UserSQLiteOpenHelper.class.getSimpleName();
 
     public final static String DB_NAME = "homework01.db";

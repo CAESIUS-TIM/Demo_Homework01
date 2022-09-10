@@ -204,4 +204,46 @@ public class UserDao {
 
         return row == 0 ? false : true;
     }
+
+    public int getNumberOfNone(){
+        return getNumberOfOneGender(User.GENDER_NONE);
+    }
+    public int getNumberOfFemale(){
+        return getNumberOfOneGender(User.GENDER_FEMALE);
+    }
+    public int getNumberOfMale(){
+        return getNumberOfOneGender(User.GENDER_MALE);
+    }
+
+    public int getNumberOfOneGender(Integer gender){
+        SQLiteDatabase db = null;
+        Cursor cursor = null;
+        int count = -1;
+
+        try {
+            db = UserSQLiteOpenHelper.getReadableDatabase(context);
+
+            if (db.isOpen()) {
+                if(gender==null){
+                    cursor = db.query(UserSQLiteOpenHelper.USER_TB_NAME,
+                            new String[]{"count(1)"}, User.COLUMN_GENDER+" is null",
+                            null, null, null, null);
+                }else{
+                    cursor = db.query(UserSQLiteOpenHelper.USER_TB_NAME,
+                            new String[]{"count(1)"}, User.COLUMN_GENDER+"=?",
+                            new String[]{gender.toString()},
+                            null, null, null);
+                }
+                // unique
+                if (cursor.moveToFirst()) {
+                    count = cursor.getInt(0);
+                }
+            }
+        } catch (Exception e) {
+            throw e;
+        } finally {
+            SQLiteCRUDHelper.close(db, cursor);
+        }
+        return count;
+    }
 }
